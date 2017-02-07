@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MF Data Logger</string>
+    <string name="title_new_capture">New capture</string>
+    <string name="label_new_capture_location">Location</string>
+    <string name="label_new_capture_room">Room</string>
+    <string name="label_new_capture_location_description">Device\'s exact position</string>
+    <string name="label_new_capture_location_activity">Activity in the local area</string>
+    <string name="label_new_capture_time">Time</string>
+    <string name="label_new_capture_time_after">seconds</string>
+    <string name="label_new_capture_default_time">30</string>
+    <string name="button_new_capture_start">Start capture</string>
+    <string name="error_empty">This cannot be empty</string>
+
+    <string-array name="diamond_floors">
+        <item>B1</item>
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+    </string-array>
+
+    <string-array name="diamond_quadrants">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+    </string-array>
+
+    <string name="button_in_progress_cancel">Cancel capture</string>
+    <string name="text_capture_in_progress">Data capture in progress - please don\'t touch</string>
+    <string name="text_in_progress_countdown_default">00:00</string>
+    <string name="toast_in_progress_completed">Capture complete!</string>
+    <string name="create_file_error">Error creating file</string>
+    <string name="start_writing">Opened writer to %s</string>
+    <string name="snackbar_new_capture_unsuccessful">Error occurred during capture</string>
+    <string name="snackbar_new_capture_successful">Capture completed without errors</string>
+    <string name="snackbar_new_capture_canceled">Capture canceled</string>
+    <string name="menu_item_captures_list">List captures</string>
+    <string name="title_activity_capture_list">Captures</string>
+    <string name="title_capture_list">Captures</string>
+    <string name="label_new_capture">Start capture</string>
+</resources>

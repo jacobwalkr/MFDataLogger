@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="bw.co.ja.mfdatalogger.InProgressActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@string/text_capture_in_progress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="60sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:textColor="@color/darkGrey"
+        android:id="@+id/text_in_progress_warning"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_in_progress_room"
+        tools:text="0103-TestRoom"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textColor="@color/darkGrey"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_in_progress_countdown_default"
+        android:textSize="110sp"
+        android:textAlignment="center"
+        android:textColor="@color/darkGrey"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/text_in_progress_countdown"/>
+
+    <Button
+        android:text="@string/button_in_progress_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        android:layout_gravity="bottom"
+        android:background="@color/lightGrey"
+        android:id="@+id/button_in_progress_cancel"
+        android:backgroundTint="@color/darkGrey"
+        android:onClick="cancelCapture"/>
+
+</LinearLayout>
