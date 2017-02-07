@@ -114,7 +114,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_weight="1"
                     android:labelFor="@id/input_new_capture_minutes"
-                    android:text="@string/label_new_capture_time_after"
+                    android:text="@string/label_new_capture_time_unit"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:textColor="@android:color/black"/>
             </LinearLayout>

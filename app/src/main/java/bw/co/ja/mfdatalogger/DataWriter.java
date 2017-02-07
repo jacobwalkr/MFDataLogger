@@ -33,7 +33,8 @@ class DataWriter {
         this.write("# " + captureDetails.getFullRoomName());
         this.write("# " + captureDetails.locationDetail);
         this.write("# " + captureDetails.localActivity);
-        this.write("# " + String.format(Locale.UK, "%d minutes", captureDetails.duration));
+        this.write("# " + String.format(Locale.UK, "%d %s", captureDetails.duration,
+                this.context.getResources().getString(R.string.label_new_capture_time_unit)));
     }
 
     public void writeData(String data) throws IOException {
@@ -65,7 +66,7 @@ class DataWriter {
         // Get a handle for the file we'll be writing readings to
         DateTime now = new DateTime();
         this.outFile = new File(getOutputFolder(),
-                String.format("%s_%s.txt", this.captureDetails.getFullRoomName(),
+                String.format("%s_%s.mflog", this.captureDetails.getFullRoomName(),
                         now.toStringForFilename()));
 
         BufferedWriter writer = null;

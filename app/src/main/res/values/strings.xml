@@ -6,7 +6,7 @@
     <string name="label_new_capture_location_description">Device\'s exact position</string>
     <string name="label_new_capture_location_activity">Activity in the local area</string>
     <string name="label_new_capture_time">Time</string>
-    <string name="label_new_capture_time_after">seconds</string>
+    <string name="label_new_capture_time_unit">seconds</string>
     <string name="label_new_capture_default_time">30</string>
     <string name="button_new_capture_start">Start capture</string>
     <string name="error_empty">This cannot be empty</string>
