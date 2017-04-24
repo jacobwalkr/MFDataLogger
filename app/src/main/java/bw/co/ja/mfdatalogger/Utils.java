@@ -1,5 +1,6 @@
 package bw.co.ja.mfdatalogger;
 
+import android.hardware.SensorManager;
 import android.widget.EditText;
 
 /**
@@ -22,5 +23,18 @@ class Utils {
         }
 
         return false;
+    }
+
+    public static int parseFrequencyLabel(String frequencyString) {
+        switch (frequencyString) {
+            case "FASTEST":
+                return SensorManager.SENSOR_DELAY_FASTEST;
+            case "NORMAL":
+                return SensorManager.SENSOR_DELAY_NORMAL;
+            case "UI":
+                return SensorManager.SENSOR_DELAY_UI;
+            default:
+                return SensorManager.SENSOR_DELAY_GAME;
+        }
     }
 }

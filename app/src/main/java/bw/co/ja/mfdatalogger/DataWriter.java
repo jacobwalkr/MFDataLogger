@@ -35,6 +35,7 @@ class DataWriter {
         this.write("# " + captureDetails.localActivity);
         this.write("# " + String.format(Locale.UK, "%d %s", captureDetails.duration,
                 this.context.getResources().getString(R.string.label_new_capture_time_unit)));
+        this.write("# " + captureDetails.sampleFrequencyString);
     }
 
     public void writeData(String data) throws IOException {

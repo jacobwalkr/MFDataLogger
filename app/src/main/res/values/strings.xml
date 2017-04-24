@@ -6,6 +6,7 @@
     <string name="label_new_capture_location_description">Device\'s exact position</string>
     <string name="label_new_capture_location_activity">Activity in the local area</string>
     <string name="label_new_capture_time">Time</string>
+    <string name="label_new_capture_frequency">Sample frequency</string>
     <string name="label_new_capture_time_unit">seconds</string>
     <string name="label_new_capture_default_time">30</string>
     <string name="button_new_capture_start">Start capture</string>
@@ -26,6 +27,13 @@
         <item>02</item>
         <item>03</item>
         <item>04</item>
+    </string-array>
+
+    <string-array name="sample_frequencies">
+        <item>FASTEST</item>
+        <item>GAME</item>
+        <item>NORMAL</item>
+        <item>UI</item>
     </string-array>
 
     <string name="button_in_progress_cancel">Cancel capture</string>

@@ -56,7 +56,7 @@ public class InProgressActivity extends AppCompatActivity {
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         Sensor magneticSensor = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         sensorManager.registerListener(magneticSensorListener, magneticSensor,
-                SensorManager.SENSOR_DELAY_GAME);
+                Utils.parseFrequencyLabel(captureDetails.sampleFrequencyString));
 
         startTimer();
     }

@@ -1,6 +1,7 @@
 package bw.co.ja.mfdatalogger;
 
 import android.content.Intent;
+import android.hardware.SensorManager;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class NewCaptureActivity extends AppCompatActivity implements View.OnClic
 
     private Spinner floorsSpinner;
     private Spinner quadrantsSpinner;
+    private Spinner frequenciesSpinner;
     private EditText roomInput;
     private EditText locationDetailInput;
     private EditText activityInput;
@@ -31,6 +33,7 @@ public class NewCaptureActivity extends AppCompatActivity implements View.OnClic
         // Set up floor/quadrant spinners
         floorsSpinner = (Spinner) findViewById(R.id.spinner_floor);
         quadrantsSpinner = (Spinner) findViewById(R.id.spinner_quadrant);
+        frequenciesSpinner = (Spinner) findViewById(R.id.spinner_frequency);
 
         ArrayAdapter<CharSequence> floorsAdapter = ArrayAdapter.createFromResource(this,
                 R.array.diamond_floors, android.R.layout.simple_spinner_item);
@@ -42,6 +45,11 @@ public class NewCaptureActivity extends AppCompatActivity implements View.OnClic
         quadrantsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         quadrantsSpinner.setAdapter(quadrantsAdapter);
 
+        ArrayAdapter<CharSequence> frequenciesAdapter = ArrayAdapter.createFromResource(this,
+                R.array.sample_frequencies, android.R.layout.simple_spinner_item);
+        frequenciesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        frequenciesSpinner.setAdapter(frequenciesAdapter);
+
         // Set up button
         Button buttonStart = (Button) findViewById(R.id.button_new_capture_start);
         buttonStart.setOnClickListener(this);
@@ -51,6 +59,9 @@ public class NewCaptureActivity extends AppCompatActivity implements View.OnClic
         locationDetailInput = (EditText) findViewById(R.id.input_location_detail);
         activityInput = (EditText) findViewById(R.id.input_local_activity);
         durationInput = (EditText) findViewById(R.id.input_new_capture_minutes);
+
+        // Set to defaults
+        resetInputs();
     }
 
     @Override
@@ -83,7 +94,8 @@ public class NewCaptureActivity extends AppCompatActivity implements View.OnClic
             Utils.viewToString(roomInput).replaceAll("\\s", ""),
             Utils.viewToString(locationDetailInput),
             Utils.viewToString(activityInput),
-            getDuration()
+            getDuration(),
+            frequenciesSpinner.getSelectedItem().toString()
         );
 
         // Start InProgressActivity or something
@@ -110,6 +122,7 @@ public class NewCaptureActivity extends AppCompatActivity implements View.OnClic
     protected void resetInputs() {
         floorsSpinner.setSelection(0);
         quadrantsSpinner.setSelection(0);
+        frequenciesSpinner.setSelection(1);
         roomInput.setText("");
         locationDetailInput.setText("");
         activityInput.setText("");

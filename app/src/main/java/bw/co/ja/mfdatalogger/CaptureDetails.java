@@ -13,23 +13,25 @@ public class CaptureDetails implements Parcelable {
 
     public final String floor;
     public final String quadrant;
+    public final String sampleFrequencyString;
     public final String room;
     public final String locationDetail;
     public final String localActivity;
     public final int duration;
 
     public CaptureDetails(String floor, String quadrant, String room, String locationDetail,
-            String localActivity, int duration) {
+            String localActivity, int duration, String sampleFrequencyString) {
         this.floor = floor;
         this.quadrant = quadrant;
         this.room = room;
         this.locationDetail = locationDetail;
         this.localActivity = localActivity;
         this.duration = duration;
+        this.sampleFrequencyString = sampleFrequencyString;
     }
 
     public CaptureDetails(Parcel parcel) {
-        String[] data = new String[5];
+        String[] data = new String[6];
         parcel.readStringArray(data);
 
         this.floor = data[0];
@@ -37,6 +39,7 @@ public class CaptureDetails implements Parcelable {
         this.room = data[2];
         this.locationDetail = data[3];
         this.localActivity = data[4];
+        this.sampleFrequencyString = data[5];
 
         this.duration = parcel.readInt();
     }
@@ -57,7 +60,8 @@ public class CaptureDetails implements Parcelable {
                 this.quadrant,
                 this.room,
                 this.locationDetail,
-                this.localActivity
+                this.localActivity,
+                this.sampleFrequencyString
         });
 
         dest.writeInt(this.duration);
